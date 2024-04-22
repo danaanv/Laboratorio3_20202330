@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +31,15 @@ public class Principal extends AppCompatActivity {
 
         editText = findViewById(R.id.editTextID);
 
+    }
+
+    protected void onResume() {
+        super.onResume();
+        showToast("Estás en la pantalla Principal");
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     public void onBuscarClick(View view) {

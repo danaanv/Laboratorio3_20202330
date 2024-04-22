@@ -1,5 +1,8 @@
 package com.example.laboratorio3;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.util.Log;
 import org.json.JSONException;
@@ -19,16 +22,22 @@ public class MovieApiTask extends AsyncTask<Void, Void, String> {
     private MovieApiListener listener;
 
     private String imdbId;
+    private Context context;
 
     public interface MovieApiListener {
         void onMovieDetailsReceived(JSONObject movieDetails);
     }
 
-    public MovieApiTask(String imdbId, MovieApiListener listener) {
+    public MovieApiTask(String imdbId, MovieApiListener listener,Context context) {
         this.imdbId = imdbId;
         this.listener = listener;
+        this.context = context;
     }
     protected String doInBackground(Void... voids) {
+        if (!isInternetConnected()) {
+            return null; // No hay conexión a Internet
+        }
+
         String apiUrl = BASE_URL + "?apikey=" + API_KEY + "&i=" + imdbId;
 
         try {
@@ -66,6 +75,12 @@ public class MovieApiTask extends AsyncTask<Void, Void, String> {
                 Log.e("MovieApiTask", "Error parsing JSON", e);
             }
         }
+    }
+
+    private boolean isInternetConnected() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        return networkInfo != null && networkInfo.isConnected();
     }
 }
 

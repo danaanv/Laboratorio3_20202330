@@ -52,21 +52,6 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="336dp"
-        android:layout_height="69dp"
-        android:text="Escribe el ID de la película que quieres buscar, recuerda que tenemos muchas películas para ti."
-        android:textAlignment="gravity"
-        android:textColor="#686868"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.613"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="336dp"
         android:layout_height="39dp"
         android:text="BUSCADOR DE PELÍCULAS"
         android:textAlignment="gravity"
@@ -75,23 +60,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.613"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475" />
-
-    <Button
-        android:id="@+id/buttonVisualizar"
-        android:layout_width="335dp"
-        android:layout_height="44dp"
-        android:background="@drawable/botonredondeadorojo"
-        android:text="Visualizar"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.298" />
+        app:layout_constraintVertical_bias="0.432" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -102,23 +74,23 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.763"
+        app:layout_constraintVertical_bias="0.711"
         app:srcCompat="@drawable/mulan" />
 
-    <Button
-        android:id="@+id/buttonBuscar"
-        android:layout_width="98dp"
-        android:layout_height="41dp"
-        android:background="@drawable/botonredondeadorojo"
-        android:text="Buscar"
-        android:textColor="@color/white"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="336dp"
+        android:layout_height="69dp"
+        android:text="Escribe el ID de la película que quieres buscar, recuerda que tenemos muchas películas para ti."
+        android:textAlignment="gravity"
+        android:textColor="#686868"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.911"
-        android:onClick="onBuscarClick"/>
+        app:layout_constraintVertical_bias="0.509" />
 
     <EditText
         android:id="@+id/editTextID"
@@ -134,10 +106,38 @@
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912" />
+        app:layout_constraintVertical_bias="0.855" />
+
+    <Button
+        android:id="@+id/buttonBuscar"
+        android:layout_width="98dp"
+        android:layout_height="41dp"
+        android:background="@drawable/botonredondeadorojo"
+        android:onClick="onBuscarClick"
+        android:text="Buscar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.849"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855" />
+
+    <Button
+        android:id="@+id/buttonVisualizar"
+        android:layout_width="335dp"
+        android:layout_height="44dp"
+        android:background="@drawable/botonredondeadorojo"
+        android:text="Visualizar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.298" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
